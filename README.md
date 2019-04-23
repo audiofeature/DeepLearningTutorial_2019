@@ -3,7 +3,7 @@
 
 (c) 2019 by Thomas Lidy - https://www.linkedin.com/in/thomaslidy
 
-This is a <b>hands-on programming tutorial for Deep learning algorithms</b> using Python 3.6 and [Keras 2.2](https://keras.io) on top of [Tensorflow](https://www.tensorflow.org). 
+This is a <b>hands-on programming tutorial for Deep Learning algorithms</b> using Python 3.6 and [Keras 2.2](https://keras.io) on top of [Tensorflow](https://www.tensorflow.org). 
 
 It was prepared in the course of Innovationslehrgang Data Science and Deep Learning.
 
@@ -13,7 +13,7 @@ For the tutorials, we use [JuPyter notebook](https://jupyter.org), which allows 
 
 ### Viewing Only
 
-If you do not want to install anything, you can simply view the tutorials' content in your browser, by clicking on each *.ipynb file (e.g. viewing this directly on Github).
+If you do not want to install anything, you can simply view the tutorials' contents in your browser by clicking on each *.ipynb file (e.g. viewing this directly on Github).
 
 The tutorial will open in a new window your browser for viewing.
 
@@ -28,7 +28,7 @@ git clone https://github.com/audiofeature/DeepLearningTutorial_2019.git
 or download as zip file from the same URL.
 
 
-Then  [install first the pre-requisites](#installation-of-pre-requisites) as described below.
+Then [install first the pre-requisites](#installation-of-pre-requisites) as described below.
 
 After that, to run the tutorials go into the tutorial's folder and start from the command line:
 
@@ -62,7 +62,7 @@ Otherwise install Python 3.6 from https://www.python.org/downloads/
 
 ### Mac OS
 
-If you haven't installed Python PIP earlier, start a Terminal and do the follwoing: 
+If you haven't installed Python PIP earlier, start a Terminal and do the following: 
 
 ```
 xcode-select --install
@@ -71,9 +71,19 @@ easy_install pip
 
 ### All OS (incl. Mac OS)
 
+#### On the iDSDL Lab machine
+
+As most of the prerequisites are installed on the Lab server already, only do:
+
+```
+pip install --user librosa
+```
+
+#### On all other computers
+
 On command line or terminal execute the following: 
 
-Note: If you do not use anaconda or virtualenv, and you want to install the libraries system-wide on Linux or Mac, use `sudo`.
+Note: If you do not use (ana)conda or virtualenv, and you want to install the libraries system-wide on Linux or Mac, use `sudo`.
 
 ```
 cd DeepLearningTutorial_2019
@@ -90,7 +100,9 @@ Note: If you have problems with installing some libraries on **Mac OS X**, check
 
 ## Optional for GPU computation
 
-If you want to train your neural networks on your GPU, also install the following for NVidia GPUs (for other ones, follow the vendor guidelines):
+If you want to train your neural networks on your GPU for faster training, also install the following for NVidia GPUs (for other ones, follow the vendor guidelines):
+
+Note: it is not mandatory to use a GPU for this tutorial.
 
 * [NVidia drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us) (for NVidia GPUs)
 * [CUDA](https://developer.nvidia.com/cuda-downloads)
@@ -101,10 +113,18 @@ And also:
 pip install tensorflow-gpu
 ```
 
+For more details see e.g. https://medium.com/@naomi.fridman/install-conda-tensorflow-gpu-and-keras-on-ubuntu-18-04-1b403e740e25
+
 ### Check if installed correctly
 
-If everything is installed correctly, it should print at the time of the first `import keras`:
- `Using Theano backend.`<br/>
+To check if Keras and Tensorflow are installed correctly, type:
+
+```
+python -c "import keras"
+```
+
+If everything is installed correctly, it should print: `Using Tensorflow backend.`
+ 
 If the GPU is configured correctly, it should also print `Using gpu device 0: GeForce GTX 1080 Ti` or similar.
 
 
