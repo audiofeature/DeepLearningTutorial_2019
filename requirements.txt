@@ -1,7 +1,7 @@
-jupyter
-Keras==2.2.4
+jupyter       # notebook environment
+Keras==2.2.4  # this is the version we used preparing the tutorial
 scikit-learn>=0.19
-# tensorflow-gpu  # only if you want to use a GPU
-pandas
-librosa
-# pillow
+# tensorflow-gpu  # needed only if you want to use a GPU
+pandas   # for data/labels preprocessing
+librosa  # for audio loading and preprocessing
+pillow   # for image loading and preprocessing (superceding PIL)
