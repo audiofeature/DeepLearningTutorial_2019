@@ -1,2 +1,3 @@
-# DeepLearningTutorial_2019
-DeepLearning Tutorial on Convolutional Neural Networks
+# Deep Learning Tutorial on Convolutional Neural Networks (CNN)
+
+2019 by Thomas Lidy
