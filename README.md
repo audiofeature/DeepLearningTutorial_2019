@@ -71,80 +71,41 @@ easy_install pip
 
 ### All OS (incl. Mac OS)
 
-On command line or terminal execute the following: (on Windows leave out `sudo`)
+On command line or terminal execute the following: 
+
+Note: If you do not use anaconda or virtualenv, and you want to install the libraries system-wide on Linux or Mac, use `sudo`.
+
 ```
-sudo pip install jupyter
+cd DeepLearningTutorial_2019
+pip install -r requirements.txt
 ```
 
-On the command line, try if you can start:
+Then try if you can start:
 ```
 jupyter notebook
 ```
 
-Install the remaining Python libraries needed:
+Note: If you have problems with installing some libraries on **Mac OS X**, check answers 2 and 3 [here](http://stackoverflow.com/questions/29485741/unable-to-upgrade-python-six-package-in-mac-osx-10-10-2).
 
-Either by:
 
-```
-sudo pip install Keras>=1.2.0 Theano==0.8.2 scikit-learn>=0.17 pandas librosa
-```
+## Optional for GPU computation
 
-or, if you downloaded or cloned this repository, by:
+If you want to train your neural networks on your GPU, also install the following for NVidia GPUs (for other ones, follow the vendor guidelines):
 
-```
-cd DL_Tutorial
-sudo pip install -r requirements.txt
-```
-
-If you have problems with installing some libraries on **Mac OS X**, check answers 2 and 3 [here](http://stackoverflow.com/questions/29485741/unable-to-upgrade-python-six-package-in-mac-osx-10-10-2).
-
-## Configure Keras to use Theano
-
-Since we use Theano as the Deep Learning computation backend, but Keras is configured to use TensorFlow by default, we have to change this in the `keras.json` configuration file, which is in the `.keras` folder of the user's HOME directory.
-
-Copy the `keras.json` included in the `DL_Tutorial` to one of the following target directories (you can overwrite an existing file):
-
-* Windows: `C:\Users\<user>\.keras\`
-* Mac: `/Users/<user>/.keras`
-* Linux: `/home/<user>/.keras`
-
-An alternative is to change these 2 lines in your `keras.json` file to the following:
-```
-{
-    "image_dim_ordering": "th",
-    "backend": "theano"
-}
-```
-
-See https://keras.io/backend/ for details or http://ankivil.com/installing-keras-theano-and-dependencies-on-windows-10/ for a step by step guide.
-
-### Optional for GPU computation
-
-If you want to train your neural networks on your GPU, also install the following (not needed for the tutorials):
-
-* [NVidia drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us)
+* [NVidia drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us) (for NVidia GPUs)
 * [CUDA](https://developer.nvidia.com/cuda-downloads)
 * [cuDNN](https://developer.nvidia.com/cudnn) (optional, for further speedup)
 
-To permanently configure Keras/Theano to use the GPU place a file `.theanorc` in your home directory with the following content:
-
+And also:
 ```
-[global]
-device = gpu
-floatX = float32
-mode=FAST_RUN
+pip install tensorflow-gpu
 ```
 
 ### Check if installed correctly
 
-To check whether Python, Keras and Theano were installed correctly, do:
-
-`
-python test_keras.py
-`
-
-If everything is installed correctly, it should print `Using Theano backend.`<br/>
-If the GPU is configured correctly, it should also print `Using gpu device 0: GeForce GTX 980 Ti` or similar.
+If everything is installed correctly, it should print at the time of the first `import keras`:
+ `Using Theano backend.`<br/>
+If the GPU is configured correctly, it should also print `Using gpu device 0: GeForce GTX 1080 Ti` or similar.
 
 
 
@@ -160,7 +121,7 @@ The following helper Python libraries are used in these tutorials:
 
 ## Data Sources
 
-The data sets we use in the tutorials are from the following sources: (a copy is included in this repository, so no need to download them)
+The data sets we use in the tutorials are from the following sources: 
 
 * Car Data Set:
 Images of side views of cars for use in evaluating object detection algorithms. The images were collected at UIUC. Contains 1050 training images (550 car and 500 non-car images) and 170 single-scale test images, containing 200 cars at roughly the same scale as in the training images.

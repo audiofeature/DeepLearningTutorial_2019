@@ -1,6 +1,7 @@
 jupyter
 Keras==2.2.4
 scikit-learn>=0.19
+# tensorflow-gpu  # only if you want to use a GPU
 pandas
 librosa
-#pillow
+# pillow
