@@ -1,0 +1,6 @@
+jupyter
+Keras==2.2.4
+scikit-learn>=0.19
+pandas
+librosa
+#pillow
