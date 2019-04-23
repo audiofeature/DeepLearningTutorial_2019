@@ -42,6 +42,7 @@ Your web browser will open showing a list of files. Start the tutorials by click
 1. <b>[Car_recognition.ipynb](Car_recognition.ipynb)</b><br/>
    This tutorial shows how images are loaded into Python and classified binary into "cars" and "not cars" using
    a) a Fully Connected neural network and b) a Convolutional Neural Network.
+   The Keras Sequential model is presented as well as several techniques on how to improve a model, including Batch Normalization, ReLU activation, Dropout and Data Augmentation.
 
 2. <b>[Music\_speech\_classification.ipynb](Music_speech_classification.ipynb)</b><br/>
    This tutorial shows how music is distinguished from speech, loading audio files into Python and classifying them either into "music" or "speech" using different architectures and parameters of a Convolutional Neural Network. It also includes techniques such as Batch Normalization,
