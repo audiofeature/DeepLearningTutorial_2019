@@ -104,7 +104,7 @@ If you want to train your neural networks on your GPU for faster training, also 
 
 Note: it is not mandatory to use a GPU for this tutorial.
 
-* [NVidia drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us) (for NVidia GPUs)
+* [NVidia drivers](http://www.nvidia.com/Download/index.aspx?lang=en-us) 
 * [CUDA](https://developer.nvidia.com/cuda-downloads)
 * [cuDNN](https://developer.nvidia.com/cudnn) (optional, for further speedup)
 
