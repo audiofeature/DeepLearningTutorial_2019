@@ -72,16 +72,6 @@ easy_install pip
 
 ### All OS (incl. Mac OS)
 
-#### On the iDSDL Lab machine
-
-As most of the prerequisites are installed on the Lab server already, only do:
-
-```
-pip install --user librosa
-```
-
-#### On all other computers
-
 On command line or terminal execute the following: 
 
 Note: If you do not use (ana)conda or virtualenv, and you want to install the libraries system-wide on Linux or Mac, use `sudo`.
