@@ -141,4 +141,4 @@ http://cogcomp.cs.illinois.edu/Data/Car/
 * Music Speech Data Set:
 by George Tzanetakis
 Collected for the purposes of music/speech discrimination. Consists of 128 tracks, each 30 seconds long. Each class (music/speech) has 64 examples in 22050Hz Mono 16-bit WAV audio format.
-http://marsyasweb.appspot.com/download/data_sets/
+http://marsyas.info/downloads/datasets.html
