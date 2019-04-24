@@ -5,3 +5,4 @@ scikit-learn>=0.19
 pandas   # for data/labels preprocessing
 librosa  # for audio loading and preprocessing
 pillow   # for image loading and preprocessing (superceding PIL)
+matplotlib  # for plotting (optional)
